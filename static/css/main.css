@@ -121,10 +121,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
               text-align: center; }
               .welcome .home .slides .slide .title-wraper .title .letter .inner {
                 display: block;
-                will-change: transform;
-                -webkit-transform: translate(0%, -5%) matrix(1, 0, 0, 1, 0, 0);
-                    -ms-transform: translate(0%, -5%) matrix(1, 0, 0, 1, 0, 0);
-                        transform: translate(0%, -5%) matrix(1, 0, 0, 1, 0, 0); }
+                will-change: transform; }
         .welcome .home .slides .slide .img {
           width: 100%;
           height: 100%;
@@ -133,8 +130,8 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
           left: 0px;
           perspective: 1000px;
           -webkit-perspective: 1000px;
-          transform-style: preserver-3d;
-          -webkit-transform-style: preserver-3d; }
+          transform-style: preserve-3d;
+          -webkit-transform-style: preserve-3d; }
           .welcome .home .slides .slide .img .img-wrapper {
             width: 100%;
             height: 100%;
@@ -145,11 +142,14 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
           .welcome .home .slides .slide .img img {
             width: 110%;
             position: absolute;
-            bottom: -50%;
+            bottom: 0px;
             left: 50%;
             -webkit-transform: translateX(-50%);
                 -ms-transform: translateX(-50%);
-                    transform: translateX(-50%); }
+                    transform: translateX(-50%);
+            -webkit-transform: translate(0%, -5%) matrix(1, 0, 0, 1, 0, 0);
+                -ms-transform: translate(0%, -5%) matrix(1, 0, 0, 1, 0, 0);
+                    transform: translate(0%, -5%) matrix(1, 0, 0, 1, 0, 0); }
 
 .banner {
   min-width: 1600px;

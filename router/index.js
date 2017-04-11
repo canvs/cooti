@@ -3,7 +3,7 @@ const template  = require('art-template');
 const router    = express.Router();
 
 const data = {
-    title:"个人信息",
+    title:"东隅的首页",
     time:(new Date).toString(),
     itemList:[{
         name:'请叫我英雄',
