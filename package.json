@@ -2,7 +2,7 @@
   "name": "cooti",
   "version": "1.0.0",
   "description": "cooti.cn",
-  "main": "server/server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,25 @@
   },
   "homepage": "https://github.com/canvs/cooti#readme",
   "dependencies": {
-    "express": "^4.15.2"
+    "art-template": "^3.1.3",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "babel-preset-es2015": "^6.5.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-file-include": "^0.13.7",
+    "gulp-htmlmin": "^1.3.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-newer": "^1.1.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.2",
+    "jshint-stylish": "^2.0.1",
+    "merge-stream": "^1.0.0"
   }
 }
