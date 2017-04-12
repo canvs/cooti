@@ -3,17 +3,17 @@
     <header class="">
         <a href="" class="logo">
             <div class="logo-name">
-                DONGYU
+                <!-- DONGYU -->
             </div>
         </a>
         <ul class="menu">
-                <a href="#">
+                <a href="/">
                     Home
                 </a>
-                <a href="">
+                <a href="about">
                     About
                 </a>
-                <a href="">
+                <a href="me">
                     Me
                 </a>
         </ul>
@@ -24,19 +24,19 @@
                 <div class="title-wraper">
                     <div class="title">
                         <span class="letter">
-                            <span class="inner" style="">M</span>
+                            <span class="inner" style="">{{monthly[0]}}</span>
                         </span>
                         <span class="letter">
-                            <span class="inner" style="">A</span>
+                            <span class="inner" style="">{{monthly[1]}}</span>
                         </span>
                         <span class="letter">
-                            <span class="inner" style="">Y</span>
+                            <span class="inner" style="">{{monthly[2]}}</span>
                         </span>
                     </div>
                 </div>
                 <div class="img">
                     <div class="img-wrapper" style="transform: rotateX(4.66527deg) rotateY(3.74411deg) translateZ(0px);">
-                        <img src="/image/maje.png" alt="" style="transform: translate(-50%, 0%) matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
+                        <img src={{image}} alt="" style="transform: translate(-50%, 0%) matrix(1, 0, 0, 1, 0, 0); opacity: 1;">
                     </div>
                 </div>
             </div>
@@ -75,6 +75,12 @@
             h2.css('webkitTransform',s);
             h2.css('transform',s);
         })
+
+        setTimeout(function(){
+            $('.welcome header .menu a').css('transform','matrix(1, 0, 0, 1, 0, 0)');
+            $('.welcome .home .title .letter .inner').css({'opacity': '1', 'transform': 'translate(0%, -5%) matrix(1, 0, 0, 1, 0, 0)'});
+
+        },800);
         
     })
 </script>

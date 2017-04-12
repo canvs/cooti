@@ -58,6 +58,14 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
             a {
                 color: #fff;
                 text-decoration: none;
+                height: 100%;
+                padding: 8px 0 0 0;
+                display: block;
+                float: left;
+                font-size: 13px;
+                transform: translateY(100%);
+                position: relative;
+                transition: all .3s linear;
                 &:after {
                     content: "";
                     width: 100%;
@@ -68,10 +76,13 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
                     bottom: 0;
                     transform-origin: 0 0;
                     transform: scaleX(0);
-                    transition: all .3s linear;
+                    transition: all .8s linear;
                 }
                 &:not(:last-child) {
                     margin-right: 35px;
+                }
+                &:hover {
+                    transform:scaleX(1);
                 }
             }
         }
@@ -119,7 +130,10 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
                             .inner {
                                 display: block;
                                 will-change:transform;
-                                // transform: translate(0%, -5%) matrix(1, 0, 0, 1, 0, 0);
+                                opacity: 0;
+                                transition: all .8s linear;
+                                transform: translateY(100%);
+                                will-change: transform;
                             }
                         }
                     }

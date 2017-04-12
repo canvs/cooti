@@ -55,7 +55,17 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
       overflow: hidden; }
       .welcome header .menu a {
         color: #fff;
-        text-decoration: none; }
+        text-decoration: none;
+        height: 100%;
+        padding: 8px 0 0 0;
+        display: block;
+        float: left;
+        font-size: 13px;
+        -webkit-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+                transform: translateY(100%);
+        position: relative;
+        transition: all .3s linear; }
         .welcome header .menu a:after {
           content: "";
           width: 100%;
@@ -70,9 +80,13 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
           -webkit-transform: scaleX(0);
               -ms-transform: scaleX(0);
                   transform: scaleX(0);
-          transition: all .3s linear; }
+          transition: all .8s linear; }
         .welcome header .menu a:not(:last-child) {
           margin-right: 35px; }
+        .welcome header .menu a:hover {
+          -webkit-transform: scaleX(1);
+              -ms-transform: scaleX(1);
+                  transform: scaleX(1); }
   .welcome .home {
     overflow: hidden;
     background-color: #000;
@@ -121,6 +135,12 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
               text-align: center; }
               .welcome .home .slides .slide .title-wraper .title .letter .inner {
                 display: block;
+                will-change: transform;
+                opacity: 0;
+                transition: all .8s linear;
+                -webkit-transform: translateY(100%);
+                    -ms-transform: translateY(100%);
+                        transform: translateY(100%);
                 will-change: transform; }
         .welcome .home .slides .slide .img {
           width: 100%;
