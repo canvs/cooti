@@ -12,4 +12,4 @@ app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use('/',indexRouter);
-app.listen(3000);
+app.listen(80);
