@@ -43,7 +43,6 @@
     "mongodb": "^2.2.25",
     "mongolass": "^2.4.5",
     "mongoose": "^4.9.4",
-    "semantic-ui": "^2.2.10",
     "sha1": "^1.1.1"
   }
 }

@@ -1,5 +1,5 @@
 module.exports = {
-    port: 1090,
+    port: 80,
     session: {
         secret: 'cooti.cn',
         key:'cooti.cn',
