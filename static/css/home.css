@@ -1,0 +1,170 @@
+a {
+  background-color: transparent;
+  vertical-align: baseline; }
+
+ul {
+  list-style-type: none; }
+
+* {
+  box-sizing: border-box; }
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+.welcome {
+  width: 100%;
+  height: 100%;
+  background-color: #000; }
+  .welcome header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0px;
+    padding: 62px 70px 0px;
+    color: #fff;
+    z-index: 5;
+    overflow: hidden;
+    background-color: transparent;
+    transition: background .01s linear 0s; }
+    .welcome header .logo {
+      float: left;
+      display: block;
+      font-size: 30px;
+      margin: 4px 0 0 0;
+      height: 30px;
+      text-decoration: none;
+      color: #fff; }
+    .welcome header .menu {
+      float: right;
+      height: 30px;
+      overflow: hidden; }
+      .welcome header .menu a {
+        color: #fff;
+        text-decoration: none;
+        height: 100%;
+        padding: 8px 0 0 0;
+        display: block;
+        float: left;
+        font-size: 13px;
+        -webkit-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+                transform: translateY(100%);
+        position: relative;
+        transition: all .3s linear; }
+        .welcome header .menu a:after {
+          content: "";
+          width: 100%;
+          background: #fff;
+          height: 1px;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          -webkit-transform-origin: 0 0;
+              -ms-transform-origin: 0 0;
+                  transform-origin: 0 0;
+          -webkit-transform: scaleX(0);
+              -ms-transform: scaleX(0);
+                  transform: scaleX(0);
+          transition: all .3s linear; }
+        .welcome header .menu a:not(:last-child) {
+          margin-right: 35px; }
+        .welcome header .menu a:hover:after {
+          -webkit-transform: scaleX(1);
+              -ms-transform: scaleX(1);
+                  transform: scaleX(1); }
+  .welcome .home {
+    overflow: hidden;
+    background-color: #000;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: absolute; }
+    .welcome .home .slides {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: all .5s linear;
+      overflow: hidden; }
+      .welcome .home .slides .slide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0; }
+        .welcome .home .slides .slide .title-wraper {
+          width: 100%;
+          height: 100%;
+          transition: all 1s ease-out;
+          position: absolute;
+          top: 0px; }
+          .welcome .home .slides .slide .title-wraper .title {
+            color: #b1a995;
+            font-family: 'druk_pierre_testregular';
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+            width: 100%;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            font-size: 500px; }
+            .welcome .home .slides .slide .title-wraper .title .letter {
+              -webkit-flex-basis: 33.333%;
+                  -ms-flex-preferred-size: 33.333%;
+                      flex-basis: 33.333%;
+              position: relative;
+              overflow: hidden;
+              height: 385px;
+              text-align: center; }
+              .welcome .home .slides .slide .title-wraper .title .letter .inner {
+                display: block;
+                will-change: transform;
+                opacity: 0;
+                transition: all .8s ease-out;
+                -webkit-transform: translateY(100%);
+                    -ms-transform: translateY(100%);
+                        transform: translateY(100%);
+                will-change: transform; }
+        .welcome .home .slides .slide .img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          perspective: 1000px;
+          -webkit-perspective: 1000px;
+          transform-style: preserve-3d;
+          -webkit-transform-style: preserve-3d; }
+          .welcome .home .slides .slide .img .img-wrapper {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transition: all 1s ease-out;
+            z-index: 1; }
+          .welcome .home .slides .slide .img img {
+            width: 110%;
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                    transform: translateX(-50%);
+            -webkit-transform: translate(0%, -5%) matrix(1, 0, 0, 1, 0, 0);
+                -ms-transform: translate(0%, -5%) matrix(1, 0, 0, 1, 0, 0);
+                    transform: translate(0%, -5%) matrix(1, 0, 0, 1, 0, 0); }
+
+.banner {
+  min-width: 1600px;
+  width: 100%; }
+  .banner img {
+    width: 100px;
+    height: 100px; }

@@ -1,0 +1,174 @@
+a {
+    background-color: transparent;
+    vertical-align: baseline;
+}
+ul {
+    list-style-type: none;
+}
+* {
+    box-sizing: border-box;
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    background: transparent;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+.welcome {
+    width: 100%;
+    height:100%;
+    background-color:#000;
+    header {
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        top: 0px;
+        padding: 62px 70px 0px;
+        color: #fff;
+        z-index: 5;
+        overflow:hidden;
+        background-color: rgba(0,0,0,0);
+        transition:background .01s linear 0s;
+
+        .logo {
+            float: left;
+            display: block;
+            font-size: 30px;
+            margin: 4px 0 0 0;
+            height: 30px;
+            text-decoration: none;
+            color: #fff;
+        }
+        .menu {
+            float: right;
+            height: 30px;
+            overflow:hidden;
+            a {
+                color: #fff;
+                text-decoration: none;
+                height: 100%;
+                padding: 8px 0 0 0;
+                display: block;
+                float: left;
+                font-size: 13px;
+                transform: translateY(100%);
+                position: relative;
+                transition: all .3s linear;
+                &:after {
+                    content: "";
+                    width: 100%;
+                    background: #fff;
+                    height: 1px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    transform-origin: 0 0;
+                    transform: scaleX(0);
+                    transition: all .3s linear;
+                }
+                &:not(:last-child) {
+                    margin-right: 35px;
+                }
+                &:hover {
+                    &:after {
+                        transform:scaleX(1);    
+                    }
+                }
+            }
+        }
+    }
+    .home {
+        overflow: hidden;
+        background-color: #000;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        .slides {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: all .5s linear;
+            overflow: hidden;
+            .slide {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                .title-wraper {
+                    width: 100%;
+                    height: 100%;
+                    transition: all 1s ease-out;
+                    position: absolute;
+                    top: 0px;
+                    .title {
+                        color: #b1a995;
+                        font-family: 'druk_pierre_testregular';
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 100%;
+                        display: flex;
+                        font-size: 500px;
+                        .letter {
+                            flex-basis: 33.333%;
+                            position: relative;
+                            overflow: hidden;
+                            height: 385px;
+                            text-align: center;
+                            .inner {
+                                display: block;
+                                will-change:transform;
+                                opacity: 0;
+                                transition: all .8s ease-out;
+                                transform: translateY(100%);
+                                will-change: transform;
+                            }
+                        }
+                    }
+                }
+                .img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    perspective: 1000px;
+                    -webkit-perspective: 1000px;
+                    transform-style: preserve-3d;
+                    -webkit-transform-style: preserve-3d;
+                    .img-wrapper {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        transition: all 1s ease-out;
+                        z-index: 1;
+                    }
+                    img {
+                        width: 110%;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        transform: translate(0%, -5%) matrix(1, 0, 0, 1, 0, 0);
+                    }
+                }
+            }
+            
+        }
+    }
+
+}
+.banner {
+    min-width: 1600px;
+    width: 100%;
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}

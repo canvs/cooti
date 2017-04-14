@@ -19,9 +19,12 @@
   "dependencies": {
     "art-template": "^3.1.3",
     "babel-preset-es2015": "^6.5.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^1.3.2",
     "del": "^2.2.0",
     "ejs": "^2.5.6",
     "express": "^4.15.2",
+    "express-session": "^1.15.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-babel": "^6.1.2",
@@ -38,6 +41,9 @@
     "jshint-stylish": "^2.0.1",
     "merge-stream": "^1.0.0",
     "mongodb": "^2.2.25",
-    "mongoose": "^4.9.4"
+    "mongolass": "^2.4.5",
+    "mongoose": "^4.9.4",
+    "semantic-ui": "^2.2.10",
+    "sha1": "^1.1.1"
   }
 }

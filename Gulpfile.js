@@ -14,6 +14,7 @@ const   fs       = require('fs'),
         gulp     = require('gulp'),
         sass     = require('gulp-sass'),
         newer    = require('gulp-newer'),
+        babel    = require('gulp-babel'),
         uglify   = require('gulp-uglify'),
         eslint   = require('gulp-eslint'),
         merge    = require('merge-stream'),
@@ -27,6 +28,7 @@ const   fs       = require('fs'),
 
 
 const PREFIX_CONF  = {browsers: ['last 5 versions']};
+const CSSNANO_CONF = {safe: true};
 
 gulp.task('watch', function() {
 
@@ -41,7 +43,43 @@ gulp.task('watch', function() {
             .pipe(newer({dest: 'static/css/', ext: '.css'}))
             .pipe(sass().on('error', sass.logError))
             .pipe(prefixer(PREFIX_CONF))
+            .pipe(cssnano(CSSNANO_CONF))
             .pipe(gulp.dest('static/css/'))
             .pipe(reload());
+            
     });
+
+    gulp.watch( ['static/es6/**/*.es'], {debounceDelay: delay}, () => {
+
+        gulp.src('static/es6/**/*.es')
+            .pipe(newer({dest: 'static/js/', ext: '.js'}))
+            .pipe(babel())
+            .pipe(uglify())
+            .pipe(gulp.dest('static/js/'))
+            .pipe(reload());
+    });
+
+
 });
+gulp.task('release',function(){
+    gulp.src(['static/scss/**/*.scss'])
+                .pipe(sass().on('error', sass.logError))
+                .pipe(prefixer(PREFIX_CONF))
+                .pipe(cssnano(CSSNANO_CONF))
+                .pipe(gulp.dest('static/css/'));
+               
+
+    gulp.src(['static/es6/**/*.es'])
+                .pipe(babel())
+                .pipe(uglify())
+                .pipe(gulp.dest('static/js/'));
+           
+    
+})
+
+
+
+
+
+
+

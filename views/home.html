@@ -1,4 +1,24 @@
-{{include './public/header'}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?0b679ce32c80131bfbd2f7ba9b139968";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+</head>
+
+<body>
 <div class="welcome">
     <header class="">
         <a href="" class="logo">
@@ -7,15 +27,19 @@
             </div>
         </a>
         <ul class="menu">
-                <a href="/">
-                    Home
-                </a>
-                <a href="about">
-                    About
-                </a>
-                <a href="me">
-                    Me
-                </a>
+            <a href="/">
+              Home
+            </a>
+            <a href="about">
+              About
+            </a>
+            <a href="me">
+              Me
+            </a>
+            <a href="signup">
+                sign
+            </a>
+
         </ul>
     </header>
     <section class="home">
@@ -56,33 +80,8 @@
     </ul>
 {{/each}}
 </div> -->
-<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script>
-    $(function(){
-        var h2 = $('.img-wrapper'),
-            v = $('.text-wrapper'),
-            g = $('.letter .inner'),
-            f = $('.img-wrapper img');
-            // m = 
-        window.addEventListener("mousemove", this.onmove),
 
-        $(window).on('mousemove',function(e){
-            var w = $(window).width(), //window width
-            h = $(window).height(), //window height
-            offsetX = 0.5 - e.pageX / w, //cursor position X
-            offsetY = 0.5 - e.pageY / h, //cursor position Y
-            s = "rotateX(" + (-offsetY * 5) + "deg) rotateY(" + (offsetX*10) + "deg) translateZ(0)";
-            h2.css('webkitTransform',s);
-            h2.css('transform',s);
-        })
-
-        setTimeout(function(){
-            $('.welcome header .menu a').css('transform','matrix(1, 0, 0, 1, 0, 0)');
-            $('.welcome .home .title .letter .inner').css({'opacity': '1', 'transform': 'translate(0%, -5%) matrix(1, 0, 0, 1, 0, 0)'});
-
-        },800);
-        
-    })
-</script>
+{{include './public/pubjs'}}
+<script src="/js/home.js"></script>
 
 {{include './public/footer'}} 

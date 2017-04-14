@@ -1,0 +1,22 @@
+body {
+  background-color: rgba(0,0,0,.3);
+}
+body > .grid {
+  height: 100%;
+}
+.image {
+  margin-top: -100px;
+}
+.column {
+  max-width: 450px;
+}
+body {
+
+    background-image: url(/image/4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.ui.stacked.segment:after, .ui.stacked.segment:before, .ui.stacked.segments:after, .ui.stacked.segments:before {
+    border: 0px;
+    background-color: transparent;
+}
