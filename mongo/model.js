@@ -2,12 +2,11 @@ const mongoose = require('mongoose');
 // const config = require('./config.js');
 // console.log(config);
 
-const DB_CNC_STR = 'mongodb://localhost:27017/cooti';
+const DB_CNC_STR = 'mongodb://121.41.39.192:27017/cooti';
 
 mongoose.connect(DB_CNC_STR);
 
 let db = mongoose.connection;
-
 
 
 db.on('error',(error)=>{
