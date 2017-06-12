@@ -1,7 +1,175 @@
-{{include './public/header'}}
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="container">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <title>{{title}}</title>
+    <link rel="shortcut icon" href="/image/favicon.ico" />
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/semantic.min.css">
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?0b679ce32c80131bfbd2f7ba9b139968";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <style>
+    body {
+        background-color: #FFFFFF;
+    }
     
-</div>
+    .main.container {
+        margin-top: 2em;
+    }
+    
+    .main.menu {
+        margin-top: 4em;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        transition: box-shadow 0.5s ease, padding 0.5s ease;
+    }
+    
+    .main.menu .item img.logo {
+        margin-right: 1.5em;
+    }
+    
+    .overlay {
+        float: left;
+        margin: 0em 3em 1em 0em;
+    }
+    
+    .overlay .menu {
+        position: relative;
+        left: 0;
+        transition: left 0.5s ease;
+    }
+    
+    .main.menu.fixed {
+        background-color: #FFFFFF;
+        border: 1px solid #DDD;
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .overlay.fixed .menu {
+        left: 800px;
+    }
+    
+    .text.container .left.floated.image {
+        margin: 2em 2em 2em -4em;
+    }
+    
+    .text.container .right.floated.image {
+        margin: 2em -4em 2em 2em;
+    }
+    
+    .ui.footer.segment {
+        margin: 5em 0em 0em;
+        padding: 5em 0em;
+    }
+    </style>
+</head>
 
-{{include './public/footer'}} 
+<body>
+    <div class="ui borderless main menu fixed top">
+        <div class="ui container">
+            <div href="#" class="header item">
+                <img class="logo" src="assets/images/logo.png"> Project Name
+            </div>
+            <a href="#" class="item">Blog</a>
+            <a href="#" class="item">Articles</a>
+            <div class="right item">
+                <a class="ui inverted button">Log in</a>
+                <a class="ui inverted button">Sign Up</a>
+            </div>
+        </div>
+    </div>
+    <div class="ui container">
+        <div class="ui grid six">
+            <div class="ui card">
+                <div class="image">
+                    <img src="/image/girl.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">Kristy</a>
+                    <div class="meta">
+                        <span class="date">Joined in 2013</span>
+                    </div>
+                    <div class="description">
+                        Kristy is an art director living in New York.
+                    </div>
+                </div>
+                <div class="extra content">
+                    <a>
+                        <i class="user icon"></i> 22 Friends
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="ui grid ten">
+            <div class="ui items">
+                <div class="item">
+                    <div class="image">
+                        <img src="/images/wireframe/image.png">
+                    </div>
+                    <div class="content">
+                        <a class="header">标题</a>
+                        <div class="meta">
+                            <span>Description</span>
+                        </div>
+                        <div class="description">
+                            <p></p>
+                        </div>
+                        <div class="extra">Additional Details </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="/images/wireframe/image.png">
+                    </div>
+                    <div class="content">
+                        <a class="header">标题</a>
+                        <div class="meta">
+                            <span>Description</span>
+                        </div>
+                        <div class="description">
+                            <p></p>
+                        </div>
+                        <div class="extra">Additional Details </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{include './public/footer'}}
+    {{include './public/pubjs'}} 
+    <script>
+    $(document)
+        .ready(function() {
+
+            // // fix main menu to page on passing
+            // $('.main.menu').visibility({
+            //     type: 'fixed'
+            // });
+            $('.overlay').visibility({
+                type: 'fixed',
+                offset: 80
+            });
+
+            // lazy load images
+            $('.image').visibility({
+                type: 'image',
+                transition: 'vertical flip in',
+                duration: 500
+            });
+
+            // show dropdown on hover
+            $('.main.menu  .ui.dropdown').dropdown({
+                on: 'hover'
+            });
+        });
+    </script>

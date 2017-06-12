@@ -1,21 +1,39 @@
-const Mongolass = require('mongolass');
+const mongoose = require('mongoose');
+// const config = require('./config.js');
+// console.log(config);
 
 const DB_CNC_STR = 'mongodb://localhost:27017/cooti';
 
-let mongolass = new Mongolass();
-mongolass.connect(DB_CNC_STR);
+mongoose.connect(DB_CNC_STR);
 
-// db.connection.on('error',(error)=>{
-//     console.log(error);
-// })
+let db = mongoose.connection;
 
-// db.connection.on('open',()=>{
-//     console.log("数据库链接成功");
-// })
 
-exports.User = mongolass.model('User',{
-    name:{type:'string'},
-    password:{type:'string'},
-    email:{type:'string'}
+
+db.on('error',(error)=>{
+    console.log(error);
 })
-exports.User.index({name:1},{unique:true}).exec();//用户名全局唯一
+
+db.on('open',()=>{
+    console.log("数据库链接成功");
+})
+
+let cootiSchema = mongoose.Schema({
+    name: { type: String, unique: true},
+    email: String,
+    password: String
+})
+
+// module.exports = mongoose.model('user',cootiSchema);
+let User = mongoose.model('User',cootiSchema);
+
+module.exports = {
+  // 注册一个用户
+    create: function create(user) {
+        let data = new User(user);//save为model的实例方法，索要new User
+        return data.save(data);
+    },
+    find: function find(obj) {
+        return User.find(obj);
+    }
+};

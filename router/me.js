@@ -5,8 +5,8 @@ const app         = express();
 const router      = express.Router();
 
 router.get('/',(req,res)=>{
-    res.send('你好');
-    // res.render('../views/me',data);
+    // res.send('你好');
+    res.render('../views/me');
 })
 
 module.exports = router;

@@ -8,12 +8,12 @@ const data = {};
 // let ALD_SINGN = require('/server/server.js').checkNotLogin;//中间件检测是否已经登陆了
 
 router.get('/',(req,res,next)=>{
-    res.send(req.flash());
-    // res.render('../views/signin',data);
+    // res.send(req.flash());
+    res.render('../views/signin',data);
 })
 
 router.post('/',(req,res,next)=>{
-    res.render('../views/signin',data);
+    // res.render('../views/signin',data);
     // res.send(req.flash());
 })
 

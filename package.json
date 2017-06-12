@@ -41,7 +41,6 @@
     "jshint-stylish": "^2.0.1",
     "merge-stream": "^1.0.0",
     "mongodb": "^2.2.25",
-    "mongolass": "^2.4.5",
     "mongoose": "^4.9.4",
     "sha1": "^1.1.1"
   }
