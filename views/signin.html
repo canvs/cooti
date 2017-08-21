@@ -4,75 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1" />
-    <title>登陆</title>
-    <link rel="shortcut icon" href="/image/favicon.ico" />
-    <link rel="stylesheet" href="/css/semantic.min.css">
-    <link rel="stylesheet" href="/css/signup.css">
+
+    <title>后台系统 - 登录</title>
+    <meta name="keywords" content="后台系统">
+    <meta name="description" content="后台系统">
+
+    <link rel="shortcut icon" href="/image/favicon.ico" /"> 
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+        <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
     <script src="https://hm.baidu.com/hm.js?0b679ce32c80131bfbd2f7ba9b139968"></script>
 </head>
 
-<body>
-<div class="ui middle aligned center aligned grid big-cover">
-    <div class="column">
-        <h2 class="ui inverted image header">
-      <img src="/image/yu.png" class="image">
-      <div class="content">
-        登陆你的账户
-      </div>
-    </h2>
-        <form class="ui large form">
-            <div class="ui stacked segment">
-                <div class="field">
-                    <div class="ui left icon input">
-                        <i class="user icon"></i>
-                        <input type="text" name="email" placeholder="邮箱">
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="ui left icon input">
-                        <i class="lock icon"></i>
-                        <input type="password" name="password" placeholder="密码">
-                    </div>
-                </div>
-                <div class="ui fluid large teal submit button">登陆</div>
+<body class="img1">
+
+    <div class="middle-box text-center loginscreen  animated fadeInDown">
+        <div>
+            <div>
+
+                <h1 class="logo-name">dy</h1>
+
             </div>
-            <div class="ui error message"></div>
-        </form>
-        <div class="ui message">
-            新用户? <a href="/signup">注册</a>
+            <h3>欢迎使用 dy</h3>
+
+            <form class="m-t" role="form" action="">
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="用户名" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="密码" required="">
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b">登 录</button>
+
+
+                <p class="text-muted text-center"> <a href="/signup"><small>忘记密码了？</small></a> | <a href="/signup">注册一个新账号</a>
+                </p>
+
+            </form>
         </div>
     </div>
-</div>
+
+
 {{include './public/pubjs'}}
-<script>
-       $(document).ready(function() {
-            $('.ui.form').form({
-                fields: {
-                    email: {
-                        identifier  : 'email',
-                        rules: [{
-                            type   : 'empty',
-                            prompt : '请输入邮箱'
-                        },
-                        {
-                            type   : 'email',
-                            prompt : '请输入正确的邮箱'
-                        }
-                    ]
-                    },
-                    password: {
-                        identifier  : 'password',
-                        rules: [{
-                          type   : 'empty',
-                          prompt : '请输入密码'
-                        },
-                        {
-                          type   : 'length[6]',
-                          prompt : '密码长度必须大于6位'
-                        }
-                    ]}
-                }
-            });
-        });
-    </script>
 {{include './public/footer'}}

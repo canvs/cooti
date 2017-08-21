@@ -4,108 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1" />
-    <title>注册</title>
-    <link rel="shortcut icon" href="/image/favicon.ico" />
-    <link rel="stylesheet" href="/css/semantic.min.css">
-    <link rel="stylesheet" href="/css/signup.css">
+
+    <title>后台系统 - 注册</title>
+    <meta name="keywords" content="后台系统">
+    <meta name="description" content="后台系统">
+
+    <link rel="shortcut icon" href="/image/favicon.ico" /"> 
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/checkbox/custom.css" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+        <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
     <script src="https://hm.baidu.com/hm.js?0b679ce32c80131bfbd2f7ba9b139968"></script>
 </head>
 
-<body>
-    <div class="ui middle aligned center aligned grid big-cover">
-        <div class="column">
-            <h2 class="ui inverted image header">
-                <img src="/image/yu.png" class="image">
-                <div class="content">
-                    注册你的账户
-                </div>
-            </h2>
-            <form class="ui large form" method="post">
-                <div class="ui stacked segment">
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <i class="user icon"></i>
-                            <input type="text" name="email" placeholder="邮箱">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <i class="user icon"></i>
-                            <input type="text" name="name" placeholder="昵称">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <i class="lock icon"></i>
-                            <input type="password" name="password" placeholder="密码">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <i class="lock icon"></i>
-                            <input type="password" name="repassword" placeholder="确认密码">
-                        </div>
-                    </div>
-                    <div class="ui fluid large teal submit button">注册</div>
-                </div>
-                <div class="ui error message"></div>
-            </form>
-            <div class="ui message">
-                已有账号? <a href="/signin">登陆</a>
+<body class="img1">
+
+    <div class="middle-box text-center loginscreen   animated fadeInDown">
+        <div>
+            <div>
+
+                <h1 class="logo-name"></h1>
+
             </div>
+            <h3>欢迎注册</h3>
+            <!-- <p>创建一个dy新账户</p> -->
+            <form class="m-t" role="form" action="http://www.zi-han.net/theme/hplus/login.html">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入用户名" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="请输入密码" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="请再次输入密码" required="">
+                </div>
+                <div class="form-group text-left">
+                    <div class="checkbox i-checks">
+                        <label class="no-padding">
+                            <input type="checkbox"><i></i> 我同意注册协议</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b">注 册</button>
+
+                <p class="text-muted text-center"><small>已经有账户了？</small><a href="/signin">点此登录</a>
+                </p>
+
+            </form>
         </div>
     </div>
     {{include './public/pubjs'}}
+    <script src="/js/checkbox/check.min.js"></script>
     <script>
-       $(document).ready(function() {
-            $('.ui.form').form({
-                fields: {
-                    email: {
-                        identifier  : 'email',
-                        rules: [{
-                            type   : 'empty',
-                            prompt : '请输入邮箱'
-                        },
-                        {
-                            type   : 'email',
-                            prompt : '请输入一个邮箱的账号'
-                        }]
-                    },
-                    name:{
-                        identifier:'name',
-                        rules: [{
-                          type   : 'empty',
-                          prompt : '请输入昵称'
-                        },
-                        {
-                          type   : 'length[2]',
-                          prompt : '昵称必须不能少于2个字或4个字母'
-                        }]
-                    },
-                    password: {
-                        identifier  : 'password',
-                        rules: [{
-                          type   : 'empty',
-                          prompt : '请输入密码'
-                        },
-                        {
-                          type   : 'length[6]',
-                          prompt : '密码长度必须大于6位'
-                        }]
-                    },
-                    repassword: {
-                        identifier:'repassword',
-                        rules:[{
-                            type : 'empty',
-                            prompt:'请确认密码'
-                        },
-                        {
-                            type : 'match[password]',
-                            prompt: '两次密码输入不一致'
-                        }]
-                    }
-                }
-            });
-        });
+        $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
     </script>
     {{include './public/footer'}}
