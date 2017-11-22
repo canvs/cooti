@@ -1,125 +1,123 @@
 {
-  "name":"郑旦",
-  "sex":"男",
-  "age":"26",
-  "exp":"本科毕业四年工作四年",
-  "nickname":"东隅",
-  "firstName":"旦",
-  "lastName":"郑",
-  "slogan":"前端开发者",
-  "location":"浙江杭州",
-  "qq":{
-    "number":"476685852"
-  },
-  "website":"http://cooti.cn",
-  "github":"https://github.com/canvs",
-  "email":"lingfeng1920@sina.com",
-  "intro":[
-    "懂产品，会nodejs后端。",
-    "善于学习。善于发现和解决重复性的影响做事效率的问题。喜欢设计，对用户体验有追求。爱折腾，没事的时候喜欢做点小东西。"
-  ],
-  "experience":[
+    "name": "东隅",
+    "sex": "男",
+    "age": "26",
+    "exp": "本科毕业四年工作四年",
+    "nickname": "东隅",
+    "firstName": "隅",
+    "lastName": "东",
+    "slogan": "前端开发",
+    "location": "浙江杭州",
+    "qq":
     {
-      "time":"2015.8-至今",
-      "title":"杭州股博科技",
-      "intro":"前端开发",
-      "description":"负责网站的底层搭建，使用gulp构建工具，一键自动部署和增量更新。模块化部分功能。大部分内容是处理股票的各项数据，接触较多的数据可视化。"
+        "number": "476685852"
     },
-    {
-      "time":"2014.8-2015.8",
-      "title":"杭州新麦科技",
-      "intro":"前端开发",
-      "description":"学习了nodejs，熟悉了gulp。基于gulp做了很多前端自动化构建的工具。同时，也学习和使用了一些前端框架如：angular、knockout等。成果：做了多个产品的pc端。包括微信公众号管理后台。还用ionic基于html5做了其中一个产品的app（包括android和ios）。以及完成了微信公众号的开发。2.利用nodejs一系列工具实现了前端代码自动添加版本戳解决发版缓存问题。实现了自动打包发版部署测试环境。 探索并设计了适用于复杂的产品OEM的前端架构。同时，利用工作之余探索并实现了前端自动化测试。"
-    },
-    {
-      "time":"2013.7-2014.6",
-      "title":"杭州东山软件",
-      "intro":"前端开发",
-      "description":"就职于杭州东山软件有限公司。从事前端开发方面工作。成果：完成了公司的官网及管理后台的前端工作。与此同时，养成了以产品的思维来开展工作的习惯。 "
-    },
-    {
-      "time":"2009年-2013.7年",
-      "title":"浙江中医药大学",
-      "intro":"其中包括半年的实习时间",
-      "description":"毕业于浙江中医药大学,期间，主要学习了软件开发的基本的思想，学习了数据结构与算法，c,c++,java等语言。课余时间制作过一个考题自动生成与批卷的网站。"
-    }
+    "website": "http://cooti.cn",
+    "github": "https://github.com/canvs",
+    "email": "lingfeng1920@sina.com",
+    "intro": [
+        "技术点:gulp, fis, grunt, node, es6, ps, svg, canvas, sass, less, Hybird, underscore, lodash",
+        "善于学习。善于发现和解决重复性的影响做事效率的问题。喜欢设计，对用户体验有追求。爱折腾，没事的时候喜欢做点小东西。"
+    ],
+    "experience": [
+        {
+            "time": "2015.8-至今",
+            "title": "杭州股博科技",
+            "intro": "前端开发",
+            "description": "负责网站的底层搭建，大部分内容是处理股票的各项数据，接触较多的数据可视化。技术主要使用了lodash,requirejs,es6,echarts等等。使用gulp构建，一键自动部署和增量更新。模块化部分功能。"
+        },
+        {
+            "time": "2014.8-2015.8",
+            "title": "杭州新麦科技",
+            "intro": "前端开发",
+            "description": "学习了nodejs，熟悉了gulp。基于gulp做了很多前端自动化构建的工具。同时，也学习和使用了一些前端框架如：angular、knockout等。成果：做了多个产品的pc端。包括微信公众号管理后台。还用ionic基于html5做了其中一个产品的app（包括android和ios）。以及完成了微信公众号的开发。2.利用nodejs一系列工具实现了前端代码自动添加版本戳解决发版缓存问题。实现了自动打包发版部署测试环境。 探索并设计了适用于复杂的产品OEM的前端架构。同时，利用工作之余探索并实现了前端自动化测试。"
+        },
+        {
+            "time": "2013.7-2014.6",
+            "title": "杭州东山软件",
+            "intro": "前端开发",
+            "description": "就职于杭州东山软件有限公司。从事前端开发方面工作。成果：完成了公司的官网及管理后台的前端工作。与此同时，养成了以产品的思维来开展工作的习惯。 "
+        },
+        {
+            "time": "2009年-2013.7年",
+            "title": "浙江中医药大学",
+            "intro": "其中包括半年的实习时间",
+            "description": "毕业于浙江中医药大学,期间，主要学习了软件开发的基本的思想，学习了数据结构与算法，c,c++,java等语言。课余时间制作过一个考题自动生成与批卷的网站。"
+        }
 
-  ],
-  "skill":[
+    ],
+    "skill": [
     {
-      "name":"Css",
-      "percent":"80%"
+        "name": "Css",
+        "percent": "80%"
     },
     {
-      "name":"PhotoShop",
-      "percent":"70%"
+        "name": "PhotoShop",
+        "percent": "70%"
     },
     {
-      "name":"JavaScript",
-      "percent":"80%"
+        "name": "JavaScript",
+        "percent": "80%"
     },
     {
-      "name":"Nodejs",
-      "percent":"60%"
+        "name": "Nodejs",
+        "percent": "60%"
     },
     {
-      "name":"MongoDB",
-      "percent":"50%"
+        "name": "MongoDB",
+        "percent": "50%"
     },
     {
-      "name":"c++",
-      "percent":"30%"
-    }
-  ],
-  "project":[
+        "name": "c++",
+        "percent": "30%"
+    }],
+    "project": [
     {
-      "time":"自毕业后",
-      "title":"个人网站",
-      "intro":"全栈开发的学习与研究",
-      "description":"创建与维护一个个人网站。是基于nodejs + express做的。自己独立开发的主题。后端基于nodejs的express和Mongodb，前端基于gulp 构建框架 使用bootstrap。"
+        "time": "自毕业后",
+        "title": "个人网站",
+        "intro": "全栈开发的学习与研究",
+        "description": "创建与维护一个个人网站。是基于nodejs + express做的。自己独立开发的主题。后端基于nodejs的express和Mongodb，前端基于gulp 构建框架 使用bootstrap。"
     },
     {
-      "time":"2015.08-至今",
-      "title":"第一趋势",
-      "intro":"一个股票金融类的网站",
-      "description":"主要负责了网站的主题架构，使用了es6 +gulp +bootstrap，包含一些数据可视化插件如d3，echarts，也写过node的爬虫爬数据，做的东西范围比较广，东西比较杂。"
+        "time": "2015.08-至今",
+        "title": "第一趋势",
+        "intro": "一个股票金融类的网站",
+        "description": "主要负责了网站的主题架构，使用了es6 +gulp +bootstrap，包含一些数据可视化插件如d3，echarts，也写过node的爬虫爬数据，做的东西范围比较广，东西比较杂。"
     },
     {
-      "time":"2014.08-2015.8",
-      "title":"掌上大学",
-      "intro":"高校媒体",
-      "description":"在此期间参与了一个包括微信端，手机端，pc端管理后台几个系统的前端方便的工作。微信端是基于knockout制作的，其他部分是基于angular和bootstrap利用gulp等一系列nodejs构建完成。"
-    }
-  ],
-  "usually":[
+        "time": "2014.08-2015.8",
+        "title": "掌上大学",
+        "intro": "高校媒体",
+        "description": "在此期间参与了一个包括微信端，手机端，pc端管理后台几个系统的前端方便的工作。微信端是基于knockout制作的，其他部分是基于angular和bootstrap利用gulp等一系列nodejs构建完成。"
+    }],
+    "usually": [
     {
-      "name":"GitHub",
-      "link":"https://github.com/canvs",
-      "description":"分享一些我的小作品 结交志同道合的朋友"
+        "name": "GitHub",
+        "link": "https://github.com/canvs",
+        "description": "分享一些我的小作品 结交志同道合的朋友"
     },
     {
-      "name":"知乎",
-      "link":"https://www.zhihu.com",
-      "description":"搜索解决一些疑问 探索新奇"
+        "name": "知乎",
+        "link": "https://www.zhihu.com",
+        "description": "搜索解决一些疑问 探索新奇"
     },
     {
-      "name":"MDN",
-      "link":"https://developer.mozilla.org",
-      "description":"查阅一些技术文档"
+        "name": "MDN",
+        "link": "https://developer.mozilla.org",
+        "description": "查阅一些技术文档"
     },
     {
-      "name":"Behance",
-      "description":"寻找灵感探索新奇"
+        "name": "Behance",
+        "description": "寻找灵感探索新奇"
     },
     {
-      "name":"stackoverflow",
-      "link":"https://stackoverflow.com/",
-      "description":"搜索解决一些疑问 探索新奇"
+        "name": "stackoverflow",
+        "link": "https://stackoverflow.com/",
+        "description": "搜索解决一些疑问 探索新奇"
     },
     {
-      "name":"segmentfault",
-      "link":"https://segmentfault.com",
-      "description":"探索和分享好的代码"
-    }
-  ]
+        "name": "segmentfault",
+        "link": "https://segmentfault.com",
+        "description": "探索和分享好的代码"
+    }]
 }
