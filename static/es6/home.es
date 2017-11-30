@@ -1,5 +1,6 @@
+    var symbolIndex  = "sh000001,sz399001,sz399006,sz399300,sz399005";
     $(function(){
-        var symbolIndex  = "sh000001,sz399001,sz399006,sz399300,sz399005";
+        
         var h2 = $('.img-wrapper'),
             v = $('.text-wrapper'),
             g = $('.letter .inner'),
