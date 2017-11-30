@@ -37,4 +37,24 @@
             }
 
         },200);
+
+        const symbolIndex  = "sh000001,sz399001,sz399006,sz399300,sz399005";
+        $.ajax({
+            type:"GET",
+            url:"http://hq.sinajs.cn/list="+symbolIndex,
+            dataType: "script",
+            cache: true
+        })
+        .done(function(r) {
+            let symbolArray = _self.symbolIndex.split(",");
+            let sinaData = [];
+            for (let i = 0; i < 5; i++) {
+                let num = 'hq_str_'+symbolArray[i];
+                sinaData[i] = window[num].split(",");
+                // _self.anyDataFromSina(sinaData[i] , i);
+                console.log(sinaData[i]);
+            }
+        });
+
+
     })
