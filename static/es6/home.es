@@ -1,4 +1,5 @@
     $(function(){
+        let symbolIndex  = "sh000001,sz399001,sz399006,sz399300,sz399005";
         var h2 = $('.img-wrapper'),
             v = $('.text-wrapper'),
             g = $('.letter .inner'),
@@ -38,23 +39,19 @@
 
         },200);
 
-        const symbolIndex  = "sh000001,sz399001,sz399006,sz399300,sz399005";
+        
+        
+        ajaxPost();
+
+    })
+
+    function ajaxPost() {
         $.ajax({
             type:"GET",
             url:"http://hq.sinajs.cn/list="+symbolIndex,
-            dataType: "script",
-            cache: true
+            dataType: "script"
         })
         .done(function(r) {
-            let symbolArray = symbolIndex.split(",");
-            let sinaData = [];
-            for (let i = 0; i < 5; i++) {
-                let num = 'hq_str_'+symbolArray[i];
-                sinaData[i] = window[num].split(",");
-                // _self.anyDataFromSina(sinaData[i] , i);
-                console.log(sinaData[i]);
-            }
+           console.log(r);
         });
-
-
-    })
+    }
