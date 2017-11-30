@@ -46,7 +46,7 @@
             cache: true
         })
         .done(function(r) {
-            let symbolArray = _self.symbolIndex.split(",");
+            let symbolArray = symbolIndex.split(",");
             let sinaData = [];
             for (let i = 0; i < 5; i++) {
                 let num = 'hq_str_'+symbolArray[i];
