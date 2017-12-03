@@ -113,12 +113,13 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
                         transform: translateY(-50%);
                         width: 100%;
                         display: flex;
-                        font-size: 500px;
+                        font-size: 400px;
                         .letter {
                             flex-basis: 33.333%;
                             position: relative;
                             overflow: hidden;
                             height: 385px;
+                            line-height: 385px;
                             text-align: center;
                             .inner {
                                 display: block;

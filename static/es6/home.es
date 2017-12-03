@@ -1,4 +1,3 @@
-    var symbolIndex  = "sh000001,sz399001,sz399006,sz399300,sz399005";
     $(function(){
         
         var h2 = $('.img-wrapper'),
@@ -40,19 +39,4 @@
 
         },200);
 
-        
-        
-        ajaxPost();
-
     });
-
-    function ajaxPost() {
-        $.ajax({
-            type:"GET",
-            url:"http://hq.sinajs.cn/list="+symbolIndex,
-            dataType: "script"
-        })
-        .done(function(r) {
-           console.log(r);
-        });
-    }
