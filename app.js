@@ -13,6 +13,7 @@ const signup     = require('./router/signup.js');
 const signin     = require('./router/signin.js');
 const library     = require('./router/library.js');
 const picture     = require('./router/picture.js');
+const init        = require('./router/init.js');
 const config     = require('./config.js');
 
 const app        = express();
@@ -59,7 +60,6 @@ app.use( (err,req,res,next)=>{//404处理
         res.send('err.message');
         res.status(500).send('not Find');     
     }
-   
 })
 
 app.use('/',home);
@@ -69,6 +69,7 @@ app.use('/signup',signup);
 app.use('/signin',signin);
 app.use('/picture',picture);
 app.use('/library',library);
+app.use('/init',init);
 
 app.listen(config.port,()=>{
     console.log(`servers start ---listen on port${config.port}`);

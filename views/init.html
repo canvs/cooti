@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+<link rel="shortcut icon" href="/image/favicon.ico" />
+
+<script src="https://hm.baidu.com/hm.js?0b679ce32c80131bfbd2f7ba9b139968"></script>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body,html {
+        margin: 0;
+        font-size: 14px;
+    }
+    .container {
+        clear: both;
+        overflow: hidden;
+    }
+    .block {
+        /*display: inline-block;*/
+        float: left;
+        padding: 5px;
+        white-space: pre;
+        word-wrap: normal;
+        word-break: break-word;
+        border: 1px solid #ddd;
+        margin: 10px;
+        background-color: #f6f6f6;
+        color: #657b83;
+        text-align: left;
+        vertical-align: top;
+        overflow-x: auto;
+        max-width: 1240px;
+        /*display: inline-block;*/
+    }
+</style>
+
+<title> 资料 </title>
+
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="block">
+            <label>push()-pop()-shift()-unshift()分别是什么功能？</label>
+            <code>
+                push 方法
+                将新元素添加到一个数组中，并返回数组的新长度值。
+                var a=[1,2,3,4];
+                a.push(5);
+                pop 方法
+                移除数组中的最后一个元素并返回该元素。
+                var a=[1,2,3,4];
+                a.pop();
+                shift 方法
+                移除数组中的第一个元素并返回该元素。
+                var a=[1,2];
+                alert(a.shift());
+                unshift 方法
+                将指定的元素插入数组开始位置并返回该数组。
+
+            </code>
+        </div>
+
+        <div class="block">
+            <label>JavaScript 如何实现继承？</label>
+            <code>
+            (1)构造继承
+            (2)原型继承
+            (3)实例继承
+            (4)拷贝继承
+            //原型prototype机制或apply和call方法去实现较简单，建议使用构造函数与原型混合方式。
+            function Parent() { 
+                this.name = 'song';
+            }
+            function Child() {
+                this.age = 28;
+            }
+            Child.prototype = new Parent(); //通过原型,继承了Parent
+            var demo = new Child();
+            alert(demo.age);
+            alert(demo.name); //得到被继承的属性
+            </code>
+        </div>
+        <div class="block">
+            <label>new 操作符具体干了什么</label>
+            <code>
+            (1)创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。
+            (2)属性和方法被加入到 this 引用的对象中。
+            (3)新创建的对象由 this 所引用，并且最后隐式的返回 this 。
+            //
+            var obj = {};
+            obj.__proto__ = Base.prototype;
+            Base.call(obj);
+            </code>
+        </div>
+        <div class="block">
+            <label>编写一个方法 求一个字符串的字节长度</label>
+            <code>
+                /*假设：一个英文字符占用一个字节，一个中文字符占用两个字节*/
+                function getBytes(str){
+                    var len = str.length,
+                        bytes = len,
+                        i = 0;
+                    for(; i<len; i++){
+                        if (str.charCodeAt(i) > 255) bytes++;
+                    }
+                    return bytes;
+                }
+                alert(getBytes("玩,as"));
+            </code>
+        </div>
+        <div class="block">
+            <label>怎么让Chrome支持小于12px 的文字？</label>
+            <code>
+                body{-webkit-text-size-adjust:none} 
+            </code>
+        </div>
+        <div class="block">
+            <label>::before 和 :after中双冒号和单冒号 有什么区别？</label>
+            <code>
+                单冒号(:)用于CSS3伪类，双冒号(::)用于CSS3伪元素。
+                伪元素由双冒号和伪元素名称组成。双冒号是在css3规范中引入的，用于区分伪类和伪元素。但是伪类兼容现存样式，浏览器需要同时支持旧的伪类，比如:first-line、:first-letter、:before、:after等。
+                对于CSS2之前已有的伪元素，比如:before，单冒号和双冒号的写法::before作用是一样的。
+                提醒，如果你的网站只需要兼容webkit、firefox、opera等浏览器，建议对于伪元素采用双冒号的写法，如果不得不兼容IE浏览器，还是用CSS2的单冒号写法比较安全。
+            </code>
+        </div>
+       
+        <div class="block">
+            <label></label>
+            <code></code>
+        </div>
+    </div>
+
+{{include './public/pubjs'}}
+</script>
+
+</body>
+
+</html>
