@@ -18,7 +18,7 @@
     "email": "lingfeng1920@sina.com",
     "tel": "13735823513",
     "intro": [
-        "技术点:gulp, fis, grunt, webpack, node, es6, react, ps, sass, underscore, lodash, rem, mongodb, nginx, redis",
+        "技术点:gulp, fis, grunt, node, es6, vue, ps, sass, mongodb, nginx",
         "善于发现和解决重复性的影响做事效率的问题。喜欢设计，对用户体验有追求。"
     ],
     "experience": [
@@ -26,7 +26,7 @@
             "time": "2015.8-至今",
             "title": "杭州股博科技",
             "intro": "前端开发",
-            "description": "负责网站的底层搭建.独立开发了多个小项目，涉及：模块化ui框架、基础工具类、通用组件、移动支付、统计、浏览器系统插件、spa应用(pc/m/rem)、模块单元测试"
+            "description": "负责网站功能开发.独立开发了多个小项目，涉及：模块化ui框架、基础工具类、通用组件、统计、(pc/m/rem)"
         },
         {
             "time": "2014.8-2015.8",

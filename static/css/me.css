@@ -22,8 +22,8 @@ html {
 body {
   font-size: 1rem;
   font-family: Lantinghei SC,Microsoft YaHei,微软雅黑,STHeiti,WenQuanYi Micro Hei,SimSun,sans-serif;
-  background: #2b2c2c;
-  color: #979899; }
+  background: #fff;
+  color: #000; }
 
 h2 {
   font-size: 4rem;
@@ -54,7 +54,7 @@ h2 {
 
 /* loading */
 body {
-  background: #2b2c2c; }
+  background: #fff; }
 
 .loading {
   position: fixed;
@@ -135,11 +135,11 @@ body {
   z-index: 1; }
 
 .section-header-bg {
-  background: #2b2c2c;
+  background: #fff;
   left: 0; }
 
 .section-content-bg {
-  background: #292a2a;
+  background: #fff;
   left: 50%; }
 
 .section {
@@ -148,7 +148,7 @@ body {
     display: flex;
     flex-flow: row wrap; }
   .section a {
-    color: #979899;
+    color: #000;
     text-decoration: none;
     display: inline-block; }
     .section a:hover {
@@ -157,7 +157,7 @@ body {
     width: 30%;
     padding: 4rem 5rem;
     z-index: 2;
-    background: #2b2c2c;
+    background: #fff;
     text-align: right; }
     .section .header .header-box {
       position: relative;
@@ -172,7 +172,7 @@ body {
   .section .section-content {
     width: 70%;
     padding: 4rem 3rem 4rem 5rem;
-    background: #292a2a;
+    background: #fff;
     z-index: 2; }
     .section .section-content .content-box {
       position: relative;
@@ -275,16 +275,16 @@ body {
   margin-right: 1rem; }
 
 .section:nth-child(even) .header {
-  background: #292a2a; }
+  background: #fff; }
 
 .section:nth-child(even) .section-header-bg {
-  background: #292a2a; }
+  background: #fff; }
 
 .section:nth-child(even) .section-content {
-  background: #2b2c2c; }
+  background: #fff; }
 
 .section:nth-child(even) .section-content-bg {
-  background: #2b2c2c; }
+  background: #fff; }
 
 .usually .item {
   margin-right: 3rem;
@@ -315,13 +315,13 @@ body {
   .section-header .contact-info {
     position: relative; }
   .section:nth-child(even) .header {
-    background: #2b2c2c; }
+    background: #fff; }
   .section:nth-child(even) .section-header-bg {
-    background: #2b2c2c; }
+    background: #fff; }
   .section:nth-child(even) .section-content {
-    background: #292a2a; }
+    background: #fff; }
   .section:nth-child(even) .section-content-bg {
-    background: #292a2a; } }
+    background: #fff; } }
 
 @media (max-width: 768px) {
   .section .header {
